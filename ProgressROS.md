@@ -21,7 +21,9 @@ $ cd ~/catkin_ws/
 $ catkin_make  
 ~~~  
 **Source new setup .sh file**  
-~~~source devel/setup.bash~~~  
+~~~  
+source devel/setup.bash  
+~~~  
 **make sure ROS_PACKAGE_PATH environment variable includes the directory you're in.**  
 ~~~  
 echo $ROS_PACKAGE_PATH
@@ -39,10 +41,11 @@ catkin_make
 ~/catkin_ws/devel/setup.bash  
 ~~~  
 **3. Launching Turlesim**
-~ roscore ~  
+~~~  
+roscore  
+~~~    
 open a new terminal window
 ~~~  
 sudo apt-get install ros-$(rosversion -d)-turtlesim  
 rosrun turtlesim turtlesim_node  
 ~~~  
-
