@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import rospy
 from geometry_msgs.msg import Twist
@@ -24,4 +24,10 @@ def move_turtle(line_vel):
         pub.publish(vel)
         rate.sleep()
 
-move_turtle(3.0)
+#let me take value from keyboard
+
+if __name__ == '__main__':
+    try:
+        move_turtle(float(sys.argv[1]),0)
+    except rospy.ROSInterruptException:
+        pass
